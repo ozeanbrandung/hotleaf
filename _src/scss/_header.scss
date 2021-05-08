@@ -1,0 +1,23 @@
+.header {
+  min-width: 100%;
+  position: fixed;
+  top: 0;
+  z-index: 1; //в этом и была проблема, почему при позиционировании фиксед - ничего не было на экране
+  background-color: rgba(255, 255, 255, 0);
+  .header__nav-item {
+    padding: 22px 40px;
+    a {
+      color: #696969;
+      font-family: 'Inter', sans-serif;
+      font-weight: 500;
+      font-size: 1.2rem;
+      cursor: pointer;
+    }
+  }
+  .header__logo {
+    width: 100px;
+    img {
+      width: 100%;
+    }
+  }
+}
