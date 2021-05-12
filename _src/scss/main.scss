@@ -12,11 +12,10 @@
   background-repeat: no-repeat;
   background-position: top right;
   background-size: cover; //обязательно, иначе изображение на весь вьюпорт не растянется
-  background-attachment: fixed;
-  transition: 1.5s ease-out;
+  //background-attachment: fixed;
+  transition: 2s ease-out;
   &:hover {
     background-image: url('../img/section4hover.jpg');
-    transition: 1.5s ease;
   }
   h1 {
     font-size: 9rem;
@@ -91,4 +90,132 @@ section.hit {
       }
     }
   }
+}
+
+.about {
+  padding-top: 15vh;
+  padding-left: 5%;
+  padding-right: 5%;
+  background-image: url('../img/section2.webp');
+  background-repeat: no-repeat;
+  background-position: center;
+  //background-attachment: fixed;
+  background-size: cover;
+  transition: 2s ease-out;
+  font-family: 'Inter', sans-serif;
+  font-weight: 500;
+  font-size: 1.2rem;
+  line-height: 2rem;
+  color: darken(#696969, 10%);
+  position: relative;
+  &:hover {
+    background-image: url('../img/section2hover.webp');
+  }
+  .about__heading {
+    text-align: left;
+    margin-bottom: 1%;
+  }
+  .about__text-two {
+    position: absolute;
+    bottom: 200px;
+  }
+  .about__text-three {
+    position: absolute;
+    right: 100px;
+    top: 300px;
+    p {
+      margin-bottom: 4%;
+    }
+  }
+}
+
+.about__paragraph {
+  width: 310px;
+}
+
+.selected {
+  padding-top: 15vh;
+  height: 80vh;
+  background-color: lighten(#DCDCDC, 5%); //потом сделай градиент на основе верхнего бг, не забудь
+  //overflow: hidden;
+  .selected__heading {
+    text-transform: uppercase;
+    margin-bottom: 0.5%;
+  }
+  .selected__tea-cards {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    max-width: 80%;
+    margin: 0 auto;
+    .selected__card {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      font-size: 1.2rem;
+      img {
+        max-width: 100%; //без этого они вообще в натуральную величину и всё тут
+        max-height: 230px;
+      }
+    }
+  }
+}
+
+footer {
+  height: 20vh;
+  background-color: lighten(#DCDCDC, 5%); //потом сделай градиент на основе верхнего бг, не забудь
+  .footer_flex-box {
+    padding-bottom: 10px;
+    max-width: 70%;
+    margin: 0 auto;
+    justify-content: space-around;
+    vertical-align: bottom;
+    font-size: 1.2rem;
+    color: #696969;
+    line-height: 2rem;
+    .footer__column-one {
+      width: 250px;
+    }
+    .footer__column-two {
+      width: 250px;
+    }
+    .footer__column-three {
+
+      h4 {
+        color: red;
+        margin-bottom: 2%;
+      }
+      form {
+        margin-bottom: 15%;
+      }
+      input {
+        width: 75%;
+        height: 30px;
+        font-size: 1.2rem; //для плейсхолдера и напечтанного текста
+        padding-left: 5px; //для плейсхолдера и напеатанного текста
+      }
+      button {
+        width: 20%;
+        height: 30px;
+        text-transform: uppercase;
+      }
+      .social {
+        ul {
+          display: flex;
+          justify-content: space-between;
+
+          li {
+            display: inline-block;
+          }
+        }
+      }
+    }
+  }
+}
+.copyright {
+  padding-top: 10px;
+  max-width: 70%;
+  margin: 0 auto;
+  text-align: center;
+  border-top: 1px solid lighten(#696969, 40%);
 }
